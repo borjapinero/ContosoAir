@@ -7,7 +7,7 @@ steps:
     displayName: 'Run npm audit'
     inputs:
       command: 'custom'
-      customCommand: 'audit'
+      customCommand: 'audit --force'
   - script: |
       npm install
       npm install jest --save-dev
