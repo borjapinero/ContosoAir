@@ -3,11 +3,13 @@ steps:
     inputs:
       command: 'custom'
       customCommand: 'install --production'
+  - script: npm audit fix --force
+    displayName: 'Fixed audit'
   - task: Npm@1
     displayName: 'Run npm audit'
     inputs:
       command: 'custom'
-      customCommand: 'audit --force'
+      customCommand: 'audit'
   - script: |
       npm install
       npm install jest --save-dev
