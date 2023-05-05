@@ -1,17 +1,16 @@
-pool:
-  vmImage: ubuntu-20.04
-trigger:
-  - master
 steps:
   - task: Npm@1
     inputs:
       command: 'custom'
-      customcommand: 'install --production'
+      customCommand: 'install --production'
+  - task: Npm@1
+    displayName: 'Run npm audit'
+    inputs:
+      command: 'custom'
+      customCommand: 'audit'
   - script: |
       npm install
-      npm install --save-dev jest
-    displayName: 'Install jest'
-  - script: |
+      npm install jest --save-dev
       npm test
     displayName: 'Run unit tests'
     continueOnError: true
