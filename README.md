@@ -2,6 +2,9 @@
 
 [![Build Status](https://dev.azure.com/borjapinero/Parts%20Unlimited/_apis/build/status%2Fborjapinero.ContosoAir?branchName=master)](https://dev.azure.com/borjapinero/Parts%20Unlimited/_build/latest?definitionId=20&branchName=master)
 
+![Status badge]([image_url](https://dev.azure.com/borjapinero/Parts%20Unlimited/_apis/build/status%2Fborjapinero.ContosoAir?branchName=master))
+
+
 # Microsoft.Github CI Demo
 
 Demo website application for Contoso Air.  
