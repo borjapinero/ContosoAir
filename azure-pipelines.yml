@@ -5,6 +5,8 @@ steps:
       customCommand: 'install --production'
   - script: npm audit fix --force
     displayName: 'Fixed audit'
+  - script: npm audit fix
+    displayName: 'Fixed audit 2'
   - task: Npm@1
     displayName: 'Run npm audit'
     inputs:
