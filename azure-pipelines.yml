@@ -9,11 +9,12 @@ steps:
       customcommand: 'install --production'
   - script: |
       npm install
+      npm install --save-dev jest
+    displayName: 'Install jest'
+  - script: |
       npm test
     displayName: 'Run unit tests'
     continueOnError: true
-  - script: npm install --save-dev jest
-    displayName: 'Install jest'
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
     condition: succeededOrFailed()
