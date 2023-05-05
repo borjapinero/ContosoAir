@@ -10,9 +10,10 @@ steps:
   - script: |
       npm install
       npm test
-      npm install --save-dev jest
     displayName: 'Run unit tests'
     continueOnError: true
+  - script: npm install --save-dev jest
+    displayName: 'Install jest'
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
     condition: succeededOrFailed()
